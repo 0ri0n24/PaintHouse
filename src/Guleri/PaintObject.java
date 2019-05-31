@@ -16,9 +16,9 @@ private    String paint;
     }
 
     private int Cost, Room;
-    void worker(int wage, int rooms){
 
-        System.out.println("");
+    void worker(int price, int rooms) {
+        System.out.println(" the price for the work =");
     }
 
 }
