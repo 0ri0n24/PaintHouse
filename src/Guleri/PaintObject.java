@@ -14,4 +14,11 @@ private    String paint;
     void doorColor(String Color){
         this.paint = Color;
     }
+
+    private int Cost, Room;
+    void worker(int wage, int rooms){
+
+        System.out.println("");
+    }
+
 }
