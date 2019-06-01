@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int status;
+        String status;
 
         // choose your rank
 
@@ -17,19 +17,47 @@ public class Main {
                 "\n 1. Customer" +
                 "\n 2. Worker " +
                 "\n 3. Store ");
-        status = in.nextInt();
+        status = in.next();
+        System.out.println("-----------------------------------------------------------------");
         switch (status) {
 
 // Rank = Customer
 
-            case 1: {
+            case "1":
+            case "customer":
+            case "Customer":
+            case "CUSTOMER": {
                 Rank Customer = new Rank();
                 Customer.Customer();
             }
             break;
             // Rank  =  worker ;
-            case 2: {
+            case "2":
+            case "worker":
+            case "Worker":
+            case "WORKER": {
                 Rank Worker = new Rank();
+                System.out.println("Hello  sir , \n " +
+                        "welcome to PaintHouse program ." +
+                        "--------------------------------------------------------------------" +
+                        "\n Please enter the values related :");
+                System.out.println("enter your name :");
+                String name = in.next();
+                System.out.println("enter your phone number");
+                long phNo = in.nextLong();
+                System.out.println("enter your wage :");
+                int wage = in.nextInt();
+                Worker.worker(name, phNo, wage);
+
+            }
+            break;
+
+// Rank = store
+            case "3":
+            case "store":
+            case " Store":
+            case "STORE": {
+                Rank store = new Rank();
                 System.out.println("Hello  sir , \n " +
                         "welcome to PaintHouse program ." +
                         "\n Please enter the values related :");
@@ -37,21 +65,7 @@ public class Main {
                 String name = in.nextLine();
 
                 System.out.println("enter your phone number");
-                String phNo = in.next();
-                Worker.worker(name, phNo);
-            }
-            break;
-
-// Rank = store
-            case 3: {
-                Rank store = new Rank();
-                System.out.println("Hello  sir , \n " +
-                        "welcome to PaintHouse program ." +
-                        "\n Please enter the values related :");
-                System.out.println("enter your name :");
-                String name = in.next();
-                System.out.println("enter your phone number");
-                String phNo = in.next();
+                double phNo = in.nextDouble();
                 store.store(name, phNo);
             }
             break;

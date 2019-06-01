@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 class Rank {
     private Scanner in = new Scanner(System.in);
-
+    int wage = 1000;
     void Customer() {
         char choose;
-        long phNo;
+        double phNo;
         String Color, address, name;
         int budget, rooms;
         PaintObject get = new PaintObject();
@@ -58,35 +58,44 @@ class Rank {
             System.out.println("enter the rooms :");
             rooms = in.nextInt();
             workPlaceCount.Store(rooms);
+            System.out.println("do you want to contact Hardware Store : y or n");
+            choose = in.next().charAt(0);
+            if (choose == 'y') {
+                DefaultUser store = new DefaultUser();
+                store.defaultStore();
+            } else {
+                System.out.println("you must arrange the required stuff");
+            }
         } else {
-            System.out.println(" we must come with the required stuff");
+            System.out.println(" you must arrange the required stuff");
         }
         System.out.println("enter your name :");
         name = in.next();
         System.out.println("enter your phone number");
-        phNo = in.nextLong();
+        phNo = in.nextDouble();
         System.out.println("please enter your address");
         address = in.nextLine();
         System.out.println("please enter your budget");
         budget = in.nextInt();
+        System.out.println(" their are the list of people who are under your budget :");
+        if (budget == wage) {
+            System.out.println("do you want to chat with the person");
+            DefaultUser worker = new DefaultUser();
+            worker.defaultCustomer();
+        }
         System.out.println("thank you sir ");
 
-    }
-
-    void worker(String name, String phNo) {
-        PaintObject get = new PaintObject();
-
-        name = "Abhishek ";
-        phNo = "8938943793";
-        System.out.println(" thanks for joining us , we search any work to you !");
 
     }
 
-    void store(String name, String phNo) {
-        PaintObject get = new PaintObject();
-        name = "guleri";
-        phNo = "9280485749";
-        System.out.println(" thanks for joining us , we search any work to you !");
+    void worker(String name, long phNo, int wage) {
+        System.out.println("name " + name + " phone number " + phNo + " wage " + wage);
+
+    }
+
+
+    void store(String name, double phNo) {
+        System.out.println("name " + name + " phone number " + phNo);
 
     }
 }
