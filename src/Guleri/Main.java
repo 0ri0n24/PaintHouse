@@ -34,7 +34,8 @@ public class Main {
                         "welcome to PaintHouse program ." +
                         "\n Please enter the values related :");
                 System.out.println("enter your name :");
-                String name = in.next();
+                String name = in.nextLine();
+
                 System.out.println("enter your phone number");
                 String phNo = in.next();
                 Worker.worker(name, phNo);

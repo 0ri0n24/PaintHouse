@@ -10,7 +10,7 @@ class Rank {
         char choose;
         long phNo;
         String Color, address, name;
-        int budget;
+        int budget, rooms;
         PaintObject get = new PaintObject();
         System.out.println("Hello  sir , \n " +
                 "welcome to PaintHouse program ." +
@@ -50,15 +50,14 @@ class Rank {
                     System.out.println("Invalid input");
                     break;
             }
-
         }
         System.out.println(" shall we come with the required stuff  : y or n");
         choose = in.next().charAt(0);
         if (choose == 'n') {
-            AssembleMaterials goStore = new AssembleMaterials();
+            AssembleMaterials workPlaceCount = new AssembleMaterials();
             System.out.println("enter the rooms :");
-            int rooms = in.nextInt();
-            goStore.Store(rooms);
+            rooms = in.nextInt();
+            workPlaceCount.Store(rooms);
         } else {
             System.out.println(" we must come with the required stuff");
         }
@@ -67,7 +66,7 @@ class Rank {
         System.out.println("enter your phone number");
         phNo = in.nextLong();
         System.out.println("please enter your address");
-        address = in.next();
+        address = in.nextLine();
         System.out.println("please enter your budget");
         budget = in.nextInt();
         System.out.println("thank you sir ");

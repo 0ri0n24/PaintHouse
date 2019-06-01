@@ -17,8 +17,17 @@ private    String paint;
 
     private int Cost, Room;
 
-    void worker(int price, int rooms) {
-        System.out.println(" the price for the work =");
+    void paintWindow() {
+
+    }
+
+    void paintWall() {
+    }
+
+    void paintRoof() {
+    }
+
+    void paintDoor() {
     }
 
 }
